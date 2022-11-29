@@ -15,6 +15,7 @@ export default class Example extends PureComponent {
   static demoUrl = "https://codesandbox.io/s/simple-area-chart-4ujxw";
 
   render() {
+    console.log(this.props.totalDays);
     return (
       <ResponsiveContainer width="100%" height="100%">
         <AreaChart

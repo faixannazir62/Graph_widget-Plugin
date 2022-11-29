@@ -56,6 +56,7 @@ __webpack_require__.r(__webpack_exports__);
 class Example extends react__WEBPACK_IMPORTED_MODULE_1__.PureComponent {
   static demoUrl = "https://codesandbox.io/s/simple-area-chart-4ujxw";
   render() {
+    console.log(this.props.totalDays);
     return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(recharts__WEBPACK_IMPORTED_MODULE_3__.ResponsiveContainer, {
       width: "100%",
       height: "100%"
@@ -151,6 +152,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function WidgetScreen() {
+  const [totalDays, setTotlaDays] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(7);
+  const handleDuraton = e => {
+    setTotlaDays(e.target.value);
+  };
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "main-c"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
@@ -161,16 +166,20 @@ function WidgetScreen() {
     className: "options"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("select", {
     name: "duration",
-    id: "duraton"
+    id: "duraton",
+    onChange: handleDuraton
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("option", {
-    value: "7"
-  }, " Last 7 days"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("option", {
+    value: "7",
+    selected: true
+  }, "Last 7 days"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("option", {
     value: "15"
   }, " Last 15 days"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("option", {
     value: "30"
   }, " Last 1 month")))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "inner-c graph-data"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Components_GraphComponent__WEBPACK_IMPORTED_MODULE_2__["default"], null)));
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Components_GraphComponent__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    totalDays: totalDays
+  })));
 }
 /* harmony default export */ __webpack_exports__["default"] = (WidgetScreen);
 
