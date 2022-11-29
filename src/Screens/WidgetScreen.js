@@ -1,11 +1,29 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import GraphComponent from "./Components/GraphComponent";
 
 function WidgetScreen() {
+  const [postData, setPostData] = useState({});
   const [totalDays, setTotlaDays] = useState(7);
+  useEffect(() => {
+    const data = fetch("https://api.publicapis.org/entries")
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        }
+        throw response;
+      })
+      .then((data) => {
+        setPostData(data.entries);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, [totalDays]);
+  console.log(postData);
   const handleDuraton = (e) => {
     setTotlaDays(e.target.value);
   };
+
   return (
     <div className="main-c">
       <div className="inner-c title-nd-options">

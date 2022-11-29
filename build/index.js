@@ -152,7 +152,21 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function WidgetScreen() {
+  const [postData, setPostData] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)({});
   const [totalDays, setTotlaDays] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(7);
+  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
+    const data = fetch("https://api.publicapis.org/entries").then(response => {
+      if (response.ok) {
+        return response.json();
+      }
+      throw response;
+    }).then(data => {
+      setPostData(data.entries);
+    }).catch(error => {
+      console.log(error);
+    });
+  }, [totalDays]);
+  console.log(postData);
   const handleDuraton = e => {
     setTotlaDays(e.target.value);
   };
