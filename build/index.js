@@ -120,7 +120,7 @@ function WidgetScreen() {
   }, [totalDays]);
   // here data is sliced into daywise
   const SlicedData = postData.slice(0, totalDays);
-  console.log(SlicedData);
+  // handle user selected options
   const handleDuraton = e => {
     setTotlaDays(e.target.value);
   };
