@@ -2,24 +2,22 @@ import React, { useState, useEffect } from "react";
 import GraphComponent from "./Components/GraphComponent";
 
 function WidgetScreen() {
-  const [postData, setPostData] = useState({});
+  const [postData, setPostData] = useState([]);
   const [totalDays, setTotlaDays] = useState(7);
   useEffect(() => {
-    const data = fetch("https://api.publicapis.org/entries")
-      .then((response) => {
-        if (response.ok) {
-          return response.json();
-        }
-        throw response;
-      })
-      .then((data) => {
-        setPostData(data.entries);
+    fetch(
+      "https://eodhistoricaldata.com/api/eod/MCD.US?from=2017-01-05&to=2017-02-10&period=d&fmt=json&api_token=demo"
+    )
+      .then((res) => res.json())
+      .then((result) => {
+        setPostData(result);
       })
       .catch((error) => {
         console.log(error);
       });
   }, [totalDays]);
-  console.log(postData);
+  const SlicedData = postData.slice(0, totalDays);
+  console.log(SlicedData);
   const handleDuraton = (e) => {
     setTotlaDays(e.target.value);
   };
@@ -41,7 +39,7 @@ function WidgetScreen() {
         </div>
       </div>
       <div className="inner-c graph-data">
-        <GraphComponent totalDays={totalDays} />
+        <GraphComponent SlicedData={SlicedData} />
       </div>
     </div>
   );

@@ -41,97 +41,53 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! recharts */ "./node_modules/recharts/es6/component/ResponsiveContainer.js");
-/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! recharts */ "./node_modules/recharts/es6/chart/AreaChart.js");
-/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! recharts */ "./node_modules/recharts/es6/cartesian/CartesianGrid.js");
-/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! recharts */ "./node_modules/recharts/es6/cartesian/XAxis.js");
-/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! recharts */ "./node_modules/recharts/es6/cartesian/YAxis.js");
-/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! recharts */ "./node_modules/recharts/es6/component/Tooltip.js");
-/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! recharts */ "./node_modules/recharts/es6/cartesian/Area.js");
-/* harmony import */ var _GraphData__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./GraphData */ "./src/Screens/Components/GraphData.js");
-
+/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! recharts */ "./node_modules/recharts/es6/component/ResponsiveContainer.js");
+/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! recharts */ "./node_modules/recharts/es6/chart/BarChart.js");
+/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! recharts */ "./node_modules/recharts/es6/cartesian/CartesianGrid.js");
+/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! recharts */ "./node_modules/recharts/es6/cartesian/XAxis.js");
+/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! recharts */ "./node_modules/recharts/es6/cartesian/YAxis.js");
+/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! recharts */ "./node_modules/recharts/es6/component/Tooltip.js");
+/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! recharts */ "./node_modules/recharts/es6/component/Legend.js");
+/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! recharts */ "./node_modules/recharts/es6/cartesian/Bar.js");
 
 
 
 class Example extends react__WEBPACK_IMPORTED_MODULE_1__.PureComponent {
-  static demoUrl = "https://codesandbox.io/s/simple-area-chart-4ujxw";
+  static demoUrl = "https://codesandbox.io/s/simple-bar-chart-tpz8r";
   render() {
-    console.log(this.props.totalDays);
-    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(recharts__WEBPACK_IMPORTED_MODULE_3__.ResponsiveContainer, {
+    const data = this.props.SlicedData;
+    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(recharts__WEBPACK_IMPORTED_MODULE_2__.ResponsiveContainer, {
       width: "100%",
       height: "100%"
-    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(recharts__WEBPACK_IMPORTED_MODULE_4__.AreaChart, {
-      width: 500,
-      height: 400,
-      data: _GraphData__WEBPACK_IMPORTED_MODULE_2__.data,
+    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(recharts__WEBPACK_IMPORTED_MODULE_3__.BarChart, {
+      width: 100,
+      height: 300,
+      data: data,
       margin: {
-        top: 10,
+        top: 5,
         right: 30,
-        left: 0,
-        bottom: 0
+        left: 20,
+        bottom: 5
       }
-    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(recharts__WEBPACK_IMPORTED_MODULE_5__.CartesianGrid, {
+    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(recharts__WEBPACK_IMPORTED_MODULE_4__.CartesianGrid, {
       strokeDasharray: "3 3"
-    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(recharts__WEBPACK_IMPORTED_MODULE_6__.XAxis, {
-      dataKey: "name"
-    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(recharts__WEBPACK_IMPORTED_MODULE_7__.YAxis, null), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(recharts__WEBPACK_IMPORTED_MODULE_8__.Tooltip, null), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(recharts__WEBPACK_IMPORTED_MODULE_9__.Area, {
-      type: "monotone",
-      dataKey: "uv",
-      stroke: "#8884d8",
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(recharts__WEBPACK_IMPORTED_MODULE_5__.XAxis, {
+      dataKey: "date"
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(recharts__WEBPACK_IMPORTED_MODULE_6__.YAxis, null), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(recharts__WEBPACK_IMPORTED_MODULE_7__.Tooltip, null), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(recharts__WEBPACK_IMPORTED_MODULE_8__.Legend, null), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(recharts__WEBPACK_IMPORTED_MODULE_9__.Bar, {
+      dataKey: "open",
       fill: "#8884d8"
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(recharts__WEBPACK_IMPORTED_MODULE_9__.Bar, {
+      dataKey: "high",
+      fill: "#00FF00"
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(recharts__WEBPACK_IMPORTED_MODULE_9__.Bar, {
+      dataKey: "low",
+      fill: "#F70000"
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(recharts__WEBPACK_IMPORTED_MODULE_9__.Bar, {
+      dataKey: "close",
+      fill: "#BE3835"
     })));
   }
 }
-
-/***/ }),
-
-/***/ "./src/Screens/Components/GraphData.js":
-/*!*********************************************!*\
-  !*** ./src/Screens/Components/GraphData.js ***!
-  \*********************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "data": function() { return /* binding */ data; }
-/* harmony export */ });
-const data = [{
-  name: "Page A",
-  uv: 4000,
-  pv: 2400,
-  amt: 2400
-}, {
-  name: "Page B",
-  uv: 3000,
-  pv: 1398,
-  amt: 2210
-}, {
-  name: "Page C",
-  uv: 2000,
-  pv: 9800,
-  amt: 2290
-}, {
-  name: "Page D",
-  uv: 2780,
-  pv: 3908,
-  amt: 2000
-}, {
-  name: "Page E",
-  uv: 1890,
-  pv: 4800,
-  amt: 2181
-}, {
-  name: "Page F",
-  uv: 2390,
-  pv: 3800,
-  amt: 2500
-}, {
-  name: "Page G",
-  uv: 3490,
-  pv: 4300,
-  amt: 2100
-}];
 
 /***/ }),
 
@@ -152,21 +108,17 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function WidgetScreen() {
-  const [postData, setPostData] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)({});
+  const [postData, setPostData] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([]);
   const [totalDays, setTotlaDays] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(7);
   (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
-    const data = fetch("https://api.publicapis.org/entries").then(response => {
-      if (response.ok) {
-        return response.json();
-      }
-      throw response;
-    }).then(data => {
-      setPostData(data.entries);
+    fetch("https://eodhistoricaldata.com/api/eod/MCD.US?from=2017-01-05&to=2017-02-10&period=d&fmt=json&api_token=demo").then(res => res.json()).then(result => {
+      setPostData(result);
     }).catch(error => {
       console.log(error);
     });
   }, [totalDays]);
-  console.log(postData);
+  const SlicedData = postData.slice(0, totalDays);
+  console.log(SlicedData);
   const handleDuraton = e => {
     setTotlaDays(e.target.value);
   };
@@ -192,7 +144,7 @@ function WidgetScreen() {
   }, " Last 1 month")))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "inner-c graph-data"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Components_GraphComponent__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    totalDays: totalDays
+    SlicedData: SlicedData
   })));
 }
 /* harmony default export */ __webpack_exports__["default"] = (WidgetScreen);
@@ -22974,48 +22926,41 @@ var memoize = function memoize(fn) {
 
 /***/ }),
 
-/***/ "./node_modules/recharts/es6/cartesian/Area.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/recharts/es6/cartesian/Area.js ***!
-  \*****************************************************/
+/***/ "./node_modules/recharts/es6/cartesian/Bar.js":
+/*!****************************************************!*\
+  !*** ./node_modules/recharts/es6/cartesian/Bar.js ***!
+  \****************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Area": function() { return /* binding */ Area; }
+/* harmony export */   "Bar": function() { return /* binding */ Bar; }
 /* harmony export */ });
-/* harmony import */ var lodash_isEqual__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash/isEqual */ "./node_modules/lodash/isEqual.js");
-/* harmony import */ var lodash_isEqual__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash_isEqual__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var lodash_isNaN__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash/isNaN */ "./node_modules/lodash/isNaN.js");
-/* harmony import */ var lodash_isNaN__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_isNaN__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var lodash_max__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lodash/max */ "./node_modules/lodash/max.js");
-/* harmony import */ var lodash_max__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lodash_max__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var lodash_isFunction__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! lodash/isFunction */ "./node_modules/lodash/isFunction.js");
-/* harmony import */ var lodash_isFunction__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(lodash_isFunction__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var lodash_get__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! lodash/get */ "./node_modules/lodash/get.js");
-/* harmony import */ var lodash_get__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(lodash_get__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var lodash_isNil__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! lodash/isNil */ "./node_modules/lodash/isNil.js");
-/* harmony import */ var lodash_isNil__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(lodash_isNil__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var lodash_isArray__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! lodash/isArray */ "./node_modules/lodash/isArray.js");
-/* harmony import */ var lodash_isArray__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(lodash_isArray__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var react_smooth__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-smooth */ "./node_modules/react-smooth/es6/index.js");
-/* harmony import */ var _shape_Curve__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../shape/Curve */ "./node_modules/recharts/es6/shape/Curve.js");
-/* harmony import */ var _shape_Dot__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../shape/Dot */ "./node_modules/recharts/es6/shape/Dot.js");
-/* harmony import */ var _container_Layer__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../container/Layer */ "./node_modules/recharts/es6/container/Layer.js");
-/* harmony import */ var _component_LabelList__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../component/LabelList */ "./node_modules/recharts/es6/component/LabelList.js");
+/* harmony import */ var lodash_isNil__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash/isNil */ "./node_modules/lodash/isNil.js");
+/* harmony import */ var lodash_isNil__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash_isNil__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var lodash_isEqual__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash/isEqual */ "./node_modules/lodash/isEqual.js");
+/* harmony import */ var lodash_isEqual__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_isEqual__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var lodash_isFunction__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lodash/isFunction */ "./node_modules/lodash/isFunction.js");
+/* harmony import */ var lodash_isFunction__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lodash_isFunction__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var lodash_isArray__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! lodash/isArray */ "./node_modules/lodash/isArray.js");
+/* harmony import */ var lodash_isArray__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(lodash_isArray__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var react_smooth__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-smooth */ "./node_modules/react-smooth/es6/index.js");
+/* harmony import */ var _shape_Rectangle__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../shape/Rectangle */ "./node_modules/recharts/es6/shape/Rectangle.js");
+/* harmony import */ var _container_Layer__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../container/Layer */ "./node_modules/recharts/es6/container/Layer.js");
+/* harmony import */ var _ErrorBar__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./ErrorBar */ "./node_modules/recharts/es6/cartesian/ErrorBar.js");
+/* harmony import */ var _component_Cell__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../component/Cell */ "./node_modules/recharts/es6/component/Cell.js");
+/* harmony import */ var _component_LabelList__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../component/LabelList */ "./node_modules/recharts/es6/component/LabelList.js");
+/* harmony import */ var _util_DataUtils__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../util/DataUtils */ "./node_modules/recharts/es6/util/DataUtils.js");
+/* harmony import */ var _util_ReactUtils__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../util/ReactUtils */ "./node_modules/recharts/es6/util/ReactUtils.js");
 /* harmony import */ var _util_Global__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../util/Global */ "./node_modules/recharts/es6/util/Global.js");
-/* harmony import */ var _util_DataUtils__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../util/DataUtils */ "./node_modules/recharts/es6/util/DataUtils.js");
-/* harmony import */ var _util_ChartUtils__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../util/ChartUtils */ "./node_modules/recharts/es6/util/ChartUtils.js");
-/* harmony import */ var _util_types__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../util/types */ "./node_modules/recharts/es6/util/types.js");
+/* harmony import */ var _util_ChartUtils__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../util/ChartUtils */ "./node_modules/recharts/es6/util/ChartUtils.js");
+/* harmony import */ var _util_types__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../util/types */ "./node_modules/recharts/es6/util/types.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-
-
 
 
 
@@ -23055,7 +23000,7 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 /**
- * @fileOverview Area
+ * @fileOverview Render a group of bar
  */
 
 
@@ -23068,15 +23013,17 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
-var Area = /*#__PURE__*/function (_PureComponent) {
-  _inherits(Area, _PureComponent);
 
-  var _super = _createSuper(Area);
 
-  function Area() {
+var Bar = /*#__PURE__*/function (_PureComponent) {
+  _inherits(Bar, _PureComponent);
+
+  var _super = _createSuper(Bar);
+
+  function Bar() {
     var _this;
 
-    _classCallCheck(this, Area);
+    _classCallCheck(this, Bar);
 
     for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
@@ -23084,9 +23031,9 @@ var Area = /*#__PURE__*/function (_PureComponent) {
 
     _this = _super.call.apply(_super, [this].concat(args));
     _this.state = {
-      isAnimationFinished: true
+      isAnimationFinished: false
     };
-    _this.id = (0,_util_DataUtils__WEBPACK_IMPORTED_MODULE_10__.uniqueId)('recharts-area-');
+    _this.id = (0,_util_DataUtils__WEBPACK_IMPORTED_MODULE_7__.uniqueId)('recharts-bar-');
 
     _this.handleAnimationEnd = function () {
       var onAnimationEnd = _this.props.onAnimationEnd;
@@ -23095,7 +23042,7 @@ var Area = /*#__PURE__*/function (_PureComponent) {
         isAnimationFinished: true
       });
 
-      if (lodash_isFunction__WEBPACK_IMPORTED_MODULE_3___default()(onAnimationEnd)) {
+      if (onAnimationEnd) {
         onAnimationEnd();
       }
     };
@@ -23107,7 +23054,7 @@ var Area = /*#__PURE__*/function (_PureComponent) {
         isAnimationFinished: false
       });
 
-      if (lodash_isFunction__WEBPACK_IMPORTED_MODULE_3___default()(onAnimationStart)) {
+      if (onAnimationStart) {
         onAnimationStart();
       }
     };
@@ -23115,180 +23062,41 @@ var Area = /*#__PURE__*/function (_PureComponent) {
     return _this;
   }
 
-  _createClass(Area, [{
-    key: "renderDots",
-    value: function renderDots(needClip, clipPathId) {
-      var isAnimationActive = this.props.isAnimationActive;
-      var isAnimationFinished = this.state.isAnimationFinished;
-
-      if (isAnimationActive && !isAnimationFinished) {
-        return null;
-      }
-
-      var _this$props = this.props,
-          dot = _this$props.dot,
-          points = _this$props.points,
-          dataKey = _this$props.dataKey;
-      var areaProps = (0,_util_types__WEBPACK_IMPORTED_MODULE_11__.filterProps)(this.props);
-      var customDotProps = (0,_util_types__WEBPACK_IMPORTED_MODULE_11__.filterProps)(dot, true);
-      var dots = points.map(function (entry, i) {
-        var dotProps = _objectSpread(_objectSpread(_objectSpread({
-          key: "dot-".concat(i),
-          r: 3
-        }, areaProps), customDotProps), {}, {
-          dataKey: dataKey,
-          cx: entry.x,
-          cy: entry.y,
-          index: i,
-          value: entry.value,
-          payload: entry.payload
-        });
-
-        return Area.renderDotItem(dot, dotProps);
-      });
-      var dotsProps = {
-        clipPath: needClip ? "url(#clipPath-".concat(clipPathId, ")") : null
-      };
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default().createElement(_container_Layer__WEBPACK_IMPORTED_MODULE_12__.Layer, _extends({
-        className: "recharts-area-dots"
-      }, dotsProps), dots);
-    }
-  }, {
-    key: "renderHorizontalRect",
-    value: function renderHorizontalRect(alpha) {
-      var _this$props2 = this.props,
-          baseLine = _this$props2.baseLine,
-          points = _this$props2.points,
-          strokeWidth = _this$props2.strokeWidth;
-      var startX = points[0].x;
-      var endX = points[points.length - 1].x;
-      var width = alpha * Math.abs(startX - endX);
-
-      var maxY = lodash_max__WEBPACK_IMPORTED_MODULE_2___default()(points.map(function (entry) {
-        return entry.y || 0;
-      }));
-
-      if ((0,_util_DataUtils__WEBPACK_IMPORTED_MODULE_10__.isNumber)(baseLine) && typeof baseLine === 'number') {
-        maxY = Math.max(baseLine, maxY);
-      } else if (baseLine && lodash_isArray__WEBPACK_IMPORTED_MODULE_6___default()(baseLine) && baseLine.length) {
-        maxY = Math.max(lodash_max__WEBPACK_IMPORTED_MODULE_2___default()(baseLine.map(function (entry) {
-          return entry.y || 0;
-        })), maxY);
-      }
-
-      if ((0,_util_DataUtils__WEBPACK_IMPORTED_MODULE_10__.isNumber)(maxY)) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default().createElement("rect", {
-          x: startX < endX ? startX : startX - width,
-          y: 0,
-          width: width,
-          height: Math.floor(maxY + (strokeWidth ? parseInt("".concat(strokeWidth), 10) : 1))
-        });
-      }
-
-      return null;
-    }
-  }, {
-    key: "renderVerticalRect",
-    value: function renderVerticalRect(alpha) {
-      var _this$props3 = this.props,
-          baseLine = _this$props3.baseLine,
-          points = _this$props3.points,
-          strokeWidth = _this$props3.strokeWidth;
-      var startY = points[0].y;
-      var endY = points[points.length - 1].y;
-      var height = alpha * Math.abs(startY - endY);
-
-      var maxX = lodash_max__WEBPACK_IMPORTED_MODULE_2___default()(points.map(function (entry) {
-        return entry.x || 0;
-      }));
-
-      if ((0,_util_DataUtils__WEBPACK_IMPORTED_MODULE_10__.isNumber)(baseLine) && typeof baseLine === 'number') {
-        maxX = Math.max(baseLine, maxX);
-      } else if (baseLine && lodash_isArray__WEBPACK_IMPORTED_MODULE_6___default()(baseLine) && baseLine.length) {
-        maxX = Math.max(lodash_max__WEBPACK_IMPORTED_MODULE_2___default()(baseLine.map(function (entry) {
-          return entry.x || 0;
-        })), maxX);
-      }
-
-      if ((0,_util_DataUtils__WEBPACK_IMPORTED_MODULE_10__.isNumber)(maxX)) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default().createElement("rect", {
-          x: 0,
-          y: startY < endY ? startY : startY - height,
-          width: maxX + (strokeWidth ? parseInt("".concat(strokeWidth), 10) : 1),
-          height: Math.floor(height)
-        });
-      }
-
-      return null;
-    }
-  }, {
-    key: "renderClipRect",
-    value: function renderClipRect(alpha) {
-      var layout = this.props.layout;
-
-      if (layout === 'vertical') {
-        return this.renderVerticalRect(alpha);
-      }
-
-      return this.renderHorizontalRect(alpha);
-    }
-  }, {
-    key: "renderAreaStatically",
-    value: function renderAreaStatically(points, baseLine, needClip, clipPathId) {
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      var _this$props4 = this.props,
-          layout = _this$props4.layout,
-          type = _this$props4.type,
-          stroke = _this$props4.stroke,
-          connectNulls = _this$props4.connectNulls,
-          isRange = _this$props4.isRange,
-          ref = _this$props4.ref,
-          others = _objectWithoutProperties(_this$props4, ["layout", "type", "stroke", "connectNulls", "isRange", "ref"]);
-
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default().createElement(_container_Layer__WEBPACK_IMPORTED_MODULE_12__.Layer, {
-        clipPath: needClip ? "url(#clipPath-".concat(clipPathId, ")") : null
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default().createElement(_shape_Curve__WEBPACK_IMPORTED_MODULE_13__.Curve, _extends({}, (0,_util_types__WEBPACK_IMPORTED_MODULE_11__.filterProps)(others, true), {
-        points: points,
-        connectNulls: connectNulls,
-        type: type,
-        baseLine: baseLine,
-        layout: layout,
-        stroke: "none",
-        className: "recharts-area-area"
-      })), stroke !== 'none' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default().createElement(_shape_Curve__WEBPACK_IMPORTED_MODULE_13__.Curve, _extends({}, (0,_util_types__WEBPACK_IMPORTED_MODULE_11__.filterProps)(this.props), {
-        className: "recharts-area-curve",
-        layout: layout,
-        type: type,
-        connectNulls: connectNulls,
-        fill: "none",
-        points: points
-      })), stroke !== 'none' && isRange && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default().createElement(_shape_Curve__WEBPACK_IMPORTED_MODULE_13__.Curve, _extends({}, (0,_util_types__WEBPACK_IMPORTED_MODULE_11__.filterProps)(this.props), {
-        className: "recharts-area-curve",
-        layout: layout,
-        type: type,
-        connectNulls: connectNulls,
-        fill: "none",
-        points: baseLine
-      })));
-    }
-  }, {
-    key: "renderAreaWithAnimation",
-    value: function renderAreaWithAnimation(needClip, clipPathId) {
+  _createClass(Bar, [{
+    key: "renderRectanglesStatically",
+    value: function renderRectanglesStatically(data) {
       var _this2 = this;
 
-      var _this$props5 = this.props,
-          points = _this$props5.points,
-          baseLine = _this$props5.baseLine,
-          isAnimationActive = _this$props5.isAnimationActive,
-          animationBegin = _this$props5.animationBegin,
-          animationDuration = _this$props5.animationDuration,
-          animationEasing = _this$props5.animationEasing,
-          animationId = _this$props5.animationId;
-      var _this$state = this.state,
-          prevPoints = _this$state.prevPoints,
-          prevBaseLine = _this$state.prevBaseLine; // const clipPathId = _.isNil(id) ? this.id : id;
+      var shape = this.props.shape;
+      var baseProps = (0,_util_types__WEBPACK_IMPORTED_MODULE_8__.filterProps)(this.props);
+      return data && data.map(function (entry, i) {
+        var props = _objectSpread(_objectSpread(_objectSpread({}, baseProps), entry), {}, {
+          index: i
+        });
 
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default().createElement(react_smooth__WEBPACK_IMPORTED_MODULE_9__["default"], {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default().createElement(_container_Layer__WEBPACK_IMPORTED_MODULE_9__.Layer, _extends({
+          className: "recharts-bar-rectangle"
+        }, (0,_util_types__WEBPACK_IMPORTED_MODULE_8__.adaptEventsOfChild)(_this2.props, entry, i), {
+          key: "rectangle-".concat(i) // eslint-disable-line react/no-array-index-key
+
+        }), Bar.renderRectangle(shape, props));
+      });
+    }
+  }, {
+    key: "renderRectanglesWithAnimation",
+    value: function renderRectanglesWithAnimation() {
+      var _this3 = this;
+
+      var _this$props = this.props,
+          data = _this$props.data,
+          layout = _this$props.layout,
+          isAnimationActive = _this$props.isAnimationActive,
+          animationBegin = _this$props.animationBegin,
+          animationDuration = _this$props.animationDuration,
+          animationEasing = _this$props.animationEasing,
+          animationId = _this$props.animationId;
+      var prevData = this.state.prevData;
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default().createElement(react_smooth__WEBPACK_IMPORTED_MODULE_6__["default"], {
         begin: animationBegin,
         duration: animationDuration,
         isActive: isAnimationActive,
@@ -23299,121 +23107,170 @@ var Area = /*#__PURE__*/function (_PureComponent) {
         to: {
           t: 1
         },
-        key: "area-".concat(animationId),
+        key: "bar-".concat(animationId),
         onAnimationEnd: this.handleAnimationEnd,
         onAnimationStart: this.handleAnimationStart
       }, function (_ref) {
         var t = _ref.t;
+        var stepData = data.map(function (entry, index) {
+          var prev = prevData && prevData[index];
 
-        if (prevPoints) {
-          var prevPointsDiffFactor = prevPoints.length / points.length; // update animtaion
-
-          var stepPoints = points.map(function (entry, index) {
-            var prevPointIndex = Math.floor(index * prevPointsDiffFactor);
-
-            if (prevPoints[prevPointIndex]) {
-              var prev = prevPoints[prevPointIndex];
-              var interpolatorX = (0,_util_DataUtils__WEBPACK_IMPORTED_MODULE_10__.interpolateNumber)(prev.x, entry.x);
-              var interpolatorY = (0,_util_DataUtils__WEBPACK_IMPORTED_MODULE_10__.interpolateNumber)(prev.y, entry.y);
-              return _objectSpread(_objectSpread({}, entry), {}, {
-                x: interpolatorX(t),
-                y: interpolatorY(t)
-              });
-            }
-
-            return entry;
-          });
-          var stepBaseLine;
-
-          if ((0,_util_DataUtils__WEBPACK_IMPORTED_MODULE_10__.isNumber)(baseLine) && typeof baseLine === 'number') {
-            var interpolator = (0,_util_DataUtils__WEBPACK_IMPORTED_MODULE_10__.interpolateNumber)(prevBaseLine, baseLine);
-            stepBaseLine = interpolator(t);
-          } else if (lodash_isNil__WEBPACK_IMPORTED_MODULE_5___default()(baseLine) || lodash_isNaN__WEBPACK_IMPORTED_MODULE_1___default()(baseLine)) {
-            var _interpolator = (0,_util_DataUtils__WEBPACK_IMPORTED_MODULE_10__.interpolateNumber)(prevBaseLine, 0);
-
-            stepBaseLine = _interpolator(t);
-          } else {
-            stepBaseLine = baseLine.map(function (entry, index) {
-              var prevPointIndex = Math.floor(index * prevPointsDiffFactor);
-
-              if (prevBaseLine[prevPointIndex]) {
-                var prev = prevBaseLine[prevPointIndex];
-                var interpolatorX = (0,_util_DataUtils__WEBPACK_IMPORTED_MODULE_10__.interpolateNumber)(prev.x, entry.x);
-                var interpolatorY = (0,_util_DataUtils__WEBPACK_IMPORTED_MODULE_10__.interpolateNumber)(prev.y, entry.y);
-                return _objectSpread(_objectSpread({}, entry), {}, {
-                  x: interpolatorX(t),
-                  y: interpolatorY(t)
-                });
-              }
-
-              return entry;
+          if (prev) {
+            var interpolatorX = (0,_util_DataUtils__WEBPACK_IMPORTED_MODULE_7__.interpolateNumber)(prev.x, entry.x);
+            var interpolatorY = (0,_util_DataUtils__WEBPACK_IMPORTED_MODULE_7__.interpolateNumber)(prev.y, entry.y);
+            var interpolatorWidth = (0,_util_DataUtils__WEBPACK_IMPORTED_MODULE_7__.interpolateNumber)(prev.width, entry.width);
+            var interpolatorHeight = (0,_util_DataUtils__WEBPACK_IMPORTED_MODULE_7__.interpolateNumber)(prev.height, entry.height);
+            return _objectSpread(_objectSpread({}, entry), {}, {
+              x: interpolatorX(t),
+              y: interpolatorY(t),
+              width: interpolatorWidth(t),
+              height: interpolatorHeight(t)
             });
           }
 
-          return _this2.renderAreaStatically(stepPoints, stepBaseLine, needClip, clipPathId);
-        }
+          if (layout === 'horizontal') {
+            var _interpolatorHeight = (0,_util_DataUtils__WEBPACK_IMPORTED_MODULE_7__.interpolateNumber)(0, entry.height);
 
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default().createElement(_container_Layer__WEBPACK_IMPORTED_MODULE_12__.Layer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default().createElement("defs", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default().createElement("clipPath", {
-          id: "animationClipPath-".concat(clipPathId)
-        }, _this2.renderClipRect(t))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default().createElement(_container_Layer__WEBPACK_IMPORTED_MODULE_12__.Layer, {
-          clipPath: "url(#animationClipPath-".concat(clipPathId, ")")
-        }, _this2.renderAreaStatically(points, baseLine, needClip, clipPathId)));
+            var h = _interpolatorHeight(t);
+
+            return _objectSpread(_objectSpread({}, entry), {}, {
+              y: entry.y + entry.height - h,
+              height: h
+            });
+          }
+
+          var interpolator = (0,_util_DataUtils__WEBPACK_IMPORTED_MODULE_7__.interpolateNumber)(0, entry.width);
+          var w = interpolator(t);
+          return _objectSpread(_objectSpread({}, entry), {}, {
+            width: w
+          });
+        });
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default().createElement(_container_Layer__WEBPACK_IMPORTED_MODULE_9__.Layer, null, _this3.renderRectanglesStatically(stepData));
       });
     }
   }, {
-    key: "renderArea",
-    value: function renderArea(needClip, clipPathId) {
-      var _this$props6 = this.props,
-          points = _this$props6.points,
-          baseLine = _this$props6.baseLine,
-          isAnimationActive = _this$props6.isAnimationActive;
-      var _this$state2 = this.state,
-          prevPoints = _this$state2.prevPoints,
-          prevBaseLine = _this$state2.prevBaseLine,
-          totalLength = _this$state2.totalLength;
+    key: "renderRectangles",
+    value: function renderRectangles() {
+      var _this$props2 = this.props,
+          data = _this$props2.data,
+          isAnimationActive = _this$props2.isAnimationActive;
+      var prevData = this.state.prevData;
 
-      if (isAnimationActive && points && points.length && (!prevPoints && totalLength > 0 || !lodash_isEqual__WEBPACK_IMPORTED_MODULE_0___default()(prevPoints, points) || !lodash_isEqual__WEBPACK_IMPORTED_MODULE_0___default()(prevBaseLine, baseLine))) {
-        return this.renderAreaWithAnimation(needClip, clipPathId);
+      if (isAnimationActive && data && data.length && (!prevData || !lodash_isEqual__WEBPACK_IMPORTED_MODULE_1___default()(prevData, data))) {
+        return this.renderRectanglesWithAnimation();
       }
 
-      return this.renderAreaStatically(points, baseLine, needClip, clipPathId);
+      return this.renderRectanglesStatically(data);
+    }
+  }, {
+    key: "renderBackground",
+    value: function renderBackground() {
+      var _this4 = this;
+
+      var data = this.props.data;
+      var backgroundProps = (0,_util_types__WEBPACK_IMPORTED_MODULE_8__.filterProps)(this.props.background);
+      return data.map(function (entry, i) {
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        var value = entry.value,
+            background = entry.background,
+            rest = _objectWithoutProperties(entry, ["value", "background"]);
+
+        if (!background) {
+          return null;
+        }
+
+        var props = _objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread({}, rest), {}, {
+          fill: '#eee'
+        }, background), backgroundProps), (0,_util_types__WEBPACK_IMPORTED_MODULE_8__.adaptEventsOfChild)(_this4.props, entry, i)), {}, {
+          index: i,
+          key: "background-bar-".concat(i),
+          className: 'recharts-bar-background-rectangle'
+        });
+
+        return Bar.renderRectangle(_this4.props.background, props);
+      });
+    }
+  }, {
+    key: "renderErrorBar",
+    value: function renderErrorBar() {
+      if (this.props.isAnimationActive && !this.state.isAnimationFinished) {
+        return null;
+      }
+
+      var _this$props3 = this.props,
+          data = _this$props3.data,
+          xAxis = _this$props3.xAxis,
+          yAxis = _this$props3.yAxis,
+          layout = _this$props3.layout,
+          children = _this$props3.children;
+      var errorBarItems = (0,_util_ReactUtils__WEBPACK_IMPORTED_MODULE_10__.findAllByType)(children, _ErrorBar__WEBPACK_IMPORTED_MODULE_11__.ErrorBar.displayName);
+
+      if (!errorBarItems) {
+        return null;
+      }
+
+      var offset = layout === 'vertical' ? data[0].height / 2 : data[0].width / 2;
+
+      function dataPointFormatter(dataPoint, dataKey) {
+        return {
+          x: dataPoint.x,
+          y: dataPoint.y,
+          value: dataPoint.value,
+          errorVal: (0,_util_ChartUtils__WEBPACK_IMPORTED_MODULE_12__.getValueByDataKey)(dataPoint, dataKey)
+        };
+      }
+
+      return errorBarItems.map(function (item, i) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default().cloneElement(item, {
+          key: "error-bar-".concat(i),
+          // eslint-disable-line react/no-array-index-key
+          data: data,
+          xAxis: xAxis,
+          yAxis: yAxis,
+          layout: layout,
+          offset: offset,
+          dataPointFormatter: dataPointFormatter
+        });
+      });
     }
   }, {
     key: "render",
     value: function render() {
-      var _this$props7 = this.props,
-          hide = _this$props7.hide,
-          dot = _this$props7.dot,
-          points = _this$props7.points,
-          className = _this$props7.className,
-          top = _this$props7.top,
-          left = _this$props7.left,
-          xAxis = _this$props7.xAxis,
-          yAxis = _this$props7.yAxis,
-          width = _this$props7.width,
-          height = _this$props7.height,
-          isAnimationActive = _this$props7.isAnimationActive,
-          id = _this$props7.id;
+      var _this$props4 = this.props,
+          hide = _this$props4.hide,
+          data = _this$props4.data,
+          className = _this$props4.className,
+          xAxis = _this$props4.xAxis,
+          yAxis = _this$props4.yAxis,
+          left = _this$props4.left,
+          top = _this$props4.top,
+          width = _this$props4.width,
+          height = _this$props4.height,
+          isAnimationActive = _this$props4.isAnimationActive,
+          background = _this$props4.background,
+          id = _this$props4.id;
 
-      if (hide || !points || !points.length) {
+      if (hide || !data || !data.length) {
         return null;
       }
 
       var isAnimationFinished = this.state.isAnimationFinished;
-      var hasSinglePoint = points.length === 1;
-      var layerClass = classnames__WEBPACK_IMPORTED_MODULE_8___default()('recharts-area', className);
+      var layerClass = classnames__WEBPACK_IMPORTED_MODULE_5___default()('recharts-bar', className);
       var needClip = xAxis && xAxis.allowDataOverflow || yAxis && yAxis.allowDataOverflow;
-      var clipPathId = lodash_isNil__WEBPACK_IMPORTED_MODULE_5___default()(id) ? this.id : id;
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default().createElement(_container_Layer__WEBPACK_IMPORTED_MODULE_12__.Layer, {
+      var clipPathId = lodash_isNil__WEBPACK_IMPORTED_MODULE_0___default()(id) ? this.id : id;
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default().createElement(_container_Layer__WEBPACK_IMPORTED_MODULE_9__.Layer, {
         className: layerClass
-      }, needClip ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default().createElement("defs", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default().createElement("clipPath", {
+      }, needClip ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default().createElement("defs", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default().createElement("clipPath", {
         id: "clipPath-".concat(clipPathId)
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default().createElement("rect", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default().createElement("rect", {
         x: left,
         y: top,
         width: width,
-        height: Math.floor(height)
-      }))) : null, !hasSinglePoint ? this.renderArea(needClip, clipPathId) : null, (dot || hasSinglePoint) && this.renderDots(needClip, clipPathId), (!isAnimationActive || isAnimationFinished) && _component_LabelList__WEBPACK_IMPORTED_MODULE_14__.LabelList.renderCallByParent(this.props, points));
+        height: height
+      }))) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default().createElement(_container_Layer__WEBPACK_IMPORTED_MODULE_9__.Layer, {
+        className: "recharts-bar-rectangles",
+        clipPath: needClip ? "url(#clipPath-".concat(clipPathId, ")") : null
+      }, background ? this.renderBackground() : null, this.renderRectangles()), this.renderErrorBar(), (!isAnimationActive || isAnimationFinished) && _component_LabelList__WEBPACK_IMPORTED_MODULE_13__.LabelList.renderCallByParent(this.props, data));
     }
   }], [{
     key: "getDerivedStateFromProps",
@@ -23421,190 +23278,167 @@ var Area = /*#__PURE__*/function (_PureComponent) {
       if (nextProps.animationId !== prevState.prevAnimationId) {
         return {
           prevAnimationId: nextProps.animationId,
-          curPoints: nextProps.points,
-          curBaseLine: nextProps.baseLine,
-          prevPoints: prevState.curPoints,
-          prevBaseLine: prevState.curBaseLine
+          curData: nextProps.data,
+          prevData: prevState.curData
         };
       }
 
-      if (nextProps.points !== prevState.curPoints || nextProps.baseLine !== prevState.curBaseLine) {
+      if (nextProps.data !== prevState.curData) {
         return {
-          curPoints: nextProps.points,
-          curBaseLine: nextProps.baseLine
+          curData: nextProps.data
         };
       }
 
       return null;
     }
+  }, {
+    key: "renderRectangle",
+    value: function renderRectangle(option, props) {
+      var rectangle;
+
+      if ( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default().isValidElement(option)) {
+        rectangle = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default().cloneElement(option, props);
+      } else if (lodash_isFunction__WEBPACK_IMPORTED_MODULE_2___default()(option)) {
+        rectangle = option(props);
+      } else {
+        rectangle = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default().createElement(_shape_Rectangle__WEBPACK_IMPORTED_MODULE_14__.Rectangle, props);
+      }
+
+      return rectangle;
+    }
   }]);
 
-  return Area;
-}(react__WEBPACK_IMPORTED_MODULE_7__.PureComponent);
-Area.displayName = 'Area';
-Area.defaultProps = {
-  stroke: '#3182bd',
-  fill: '#3182bd',
-  fillOpacity: 0.6,
+  return Bar;
+}(react__WEBPACK_IMPORTED_MODULE_4__.PureComponent);
+Bar.displayName = 'Bar';
+Bar.defaultProps = {
   xAxisId: 0,
   yAxisId: 0,
-  legendType: 'line',
-  connectNulls: false,
-  // points of area
-  points: [],
-  dot: false,
-  activeDot: true,
+  legendType: 'rect',
+  minPointSize: 0,
   hide: false,
+  // data of bar
+  data: [],
+  layout: 'vertical',
   isAnimationActive: !_util_Global__WEBPACK_IMPORTED_MODULE_15__.Global.isSsr,
   animationBegin: 0,
-  animationDuration: 1500,
+  animationDuration: 400,
   animationEasing: 'ease'
 };
 
-Area.getBaseValue = function (props, item, xAxis, yAxis) {
-  var layout = props.layout;
-  var baseValue = item.props.baseValue;
-
-  if ((0,_util_DataUtils__WEBPACK_IMPORTED_MODULE_10__.isNumber)(baseValue) && typeof baseValue === 'number') {
-    return baseValue;
-  }
-
-  var numericAxis = layout === 'horizontal' ? yAxis : xAxis;
-  var domain = numericAxis.scale.domain();
-
-  if (numericAxis.type === 'number') {
-    var max = Math.max(domain[0], domain[1]);
-    var min = Math.min(domain[0], domain[1]);
-
-    if (baseValue === 'dataMin') {
-      return min;
-    }
-
-    if (baseValue === 'dataMax') {
-      return max;
-    }
-
-    return max < 0 ? max : Math.max(Math.min(domain[0], domain[1]), 0);
-  }
-
-  if (baseValue === 'dataMin') {
-    return domain[0];
-  }
-
-  if (baseValue === 'dataMax') {
-    return domain[1];
-  }
-
-  return domain[0];
-};
-
-Area.getComposedData = function (_ref2) {
+Bar.getComposedData = function (_ref2) {
   var props = _ref2.props,
       item = _ref2.item,
+      barPosition = _ref2.barPosition,
+      bandSize = _ref2.bandSize,
       xAxis = _ref2.xAxis,
       yAxis = _ref2.yAxis,
       xAxisTicks = _ref2.xAxisTicks,
       yAxisTicks = _ref2.yAxisTicks,
-      bandSize = _ref2.bandSize,
-      dataKey = _ref2.dataKey,
       stackedData = _ref2.stackedData,
       dataStartIndex = _ref2.dataStartIndex,
       displayedData = _ref2.displayedData,
       offset = _ref2.offset;
+  var pos = (0,_util_ChartUtils__WEBPACK_IMPORTED_MODULE_12__.findPositionOfBar)(barPosition, item);
+
+  if (!pos) {
+    return null;
+  }
+
   var layout = props.layout;
-  var hasStack = stackedData && stackedData.length;
-  var baseValue = Area.getBaseValue(props, item, xAxis, yAxis);
-  var isRange = false;
-  var points = displayedData.map(function (entry, index) {
-    var originalValue = (0,_util_ChartUtils__WEBPACK_IMPORTED_MODULE_16__.getValueByDataKey)(entry, dataKey);
-    var value;
+  var _item$props = item.props,
+      dataKey = _item$props.dataKey,
+      children = _item$props.children,
+      minPointSize = _item$props.minPointSize;
+  var numericAxis = layout === 'horizontal' ? yAxis : xAxis;
+  var stackedDomain = stackedData ? numericAxis.scale.domain() : null;
+  var baseValue = (0,_util_ChartUtils__WEBPACK_IMPORTED_MODULE_12__.getBaseValueOfBar)({
+    numericAxis: numericAxis
+  });
+  var cells = (0,_util_ReactUtils__WEBPACK_IMPORTED_MODULE_10__.findAllByType)(children, _component_Cell__WEBPACK_IMPORTED_MODULE_16__.Cell.displayName);
+  var rects = displayedData.map(function (entry, index) {
+    var value, x, y, width, height, background;
 
-    if (hasStack) {
-      value = stackedData[dataStartIndex + index];
+    if (stackedData) {
+      value = (0,_util_ChartUtils__WEBPACK_IMPORTED_MODULE_12__.truncateByDomain)(stackedData[dataStartIndex + index], stackedDomain);
     } else {
-      value = originalValue;
+      value = (0,_util_ChartUtils__WEBPACK_IMPORTED_MODULE_12__.getValueByDataKey)(entry, dataKey);
 
-      if (!lodash_isArray__WEBPACK_IMPORTED_MODULE_6___default()(value)) {
+      if (!lodash_isArray__WEBPACK_IMPORTED_MODULE_3___default()(value)) {
         value = [baseValue, value];
-      } else {
-        isRange = true;
       }
     }
 
-    var isBreakPoint = lodash_isNil__WEBPACK_IMPORTED_MODULE_5___default()(value[1]) || hasStack && lodash_isNil__WEBPACK_IMPORTED_MODULE_5___default()(originalValue);
-
     if (layout === 'horizontal') {
-      return {
-        x: (0,_util_ChartUtils__WEBPACK_IMPORTED_MODULE_16__.getCateCoordinateOfLine)({
-          axis: xAxis,
-          ticks: xAxisTicks,
-          bandSize: bandSize,
-          entry: entry,
-          index: index
-        }),
-        y: isBreakPoint ? null : yAxis.scale(value[1]),
-        value: value,
-        payload: entry
+      x = (0,_util_ChartUtils__WEBPACK_IMPORTED_MODULE_12__.getCateCoordinateOfBar)({
+        axis: xAxis,
+        ticks: xAxisTicks,
+        bandSize: bandSize,
+        offset: pos.offset,
+        entry: entry,
+        index: index
+      });
+      y = yAxis.scale(value[1]);
+      width = pos.size;
+      height = yAxis.scale(value[0]) - yAxis.scale(value[1]);
+      background = {
+        x: x,
+        y: yAxis.y,
+        width: width,
+        height: yAxis.height
       };
-    }
 
-    return {
-      x: isBreakPoint ? null : xAxis.scale(value[1]),
-      y: (0,_util_ChartUtils__WEBPACK_IMPORTED_MODULE_16__.getCateCoordinateOfLine)({
+      if (Math.abs(minPointSize) > 0 && Math.abs(height) < Math.abs(minPointSize)) {
+        var delta = (0,_util_DataUtils__WEBPACK_IMPORTED_MODULE_7__.mathSign)(height || minPointSize) * (Math.abs(minPointSize) - Math.abs(height));
+        y -= delta;
+        height += delta;
+      }
+    } else {
+      x = xAxis.scale(value[0]);
+      y = (0,_util_ChartUtils__WEBPACK_IMPORTED_MODULE_12__.getCateCoordinateOfBar)({
         axis: yAxis,
         ticks: yAxisTicks,
         bandSize: bandSize,
+        offset: pos.offset,
         entry: entry,
         index: index
-      }),
-      value: value,
-      payload: entry
-    };
-  });
-  var baseLine;
-
-  if (hasStack || isRange) {
-    baseLine = points.map(function (entry) {
-      if (layout === 'horizontal') {
-        return {
-          x: entry.x,
-          y: !lodash_isNil__WEBPACK_IMPORTED_MODULE_5___default()(lodash_get__WEBPACK_IMPORTED_MODULE_4___default()(entry, 'value[0]')) && !lodash_isNil__WEBPACK_IMPORTED_MODULE_5___default()(lodash_get__WEBPACK_IMPORTED_MODULE_4___default()(entry, 'y')) ? yAxis.scale(lodash_get__WEBPACK_IMPORTED_MODULE_4___default()(entry, 'value[0]')) : null
-        };
-      }
-
-      return {
-        x: !lodash_isNil__WEBPACK_IMPORTED_MODULE_5___default()(lodash_get__WEBPACK_IMPORTED_MODULE_4___default()(entry, 'value[0]')) ? xAxis.scale(lodash_get__WEBPACK_IMPORTED_MODULE_4___default()(entry, 'value[0]')) : null,
-        y: entry.y
+      });
+      width = xAxis.scale(value[1]) - xAxis.scale(value[0]);
+      height = pos.size;
+      background = {
+        x: xAxis.x,
+        y: y,
+        width: xAxis.width,
+        height: height
       };
+
+      if (Math.abs(minPointSize) > 0 && Math.abs(width) < Math.abs(minPointSize)) {
+        var _delta = (0,_util_DataUtils__WEBPACK_IMPORTED_MODULE_7__.mathSign)(width || minPointSize) * (Math.abs(minPointSize) - Math.abs(width));
+
+        width += _delta;
+      }
+    }
+
+    return _objectSpread(_objectSpread(_objectSpread({}, entry), {}, {
+      x: x,
+      y: y,
+      width: width,
+      height: height,
+      value: stackedData ? value : value[1],
+      payload: entry,
+      background: background
+    }, cells && cells[index] && cells[index].props), {}, {
+      tooltipPayload: [(0,_util_ChartUtils__WEBPACK_IMPORTED_MODULE_12__.getTooltipItem)(item, entry)],
+      tooltipPosition: {
+        x: x + width / 2,
+        y: y + height / 2
+      }
     });
-  } else if (layout === 'horizontal') {
-    baseLine = yAxis.scale(baseValue);
-  } else {
-    baseLine = xAxis.scale(baseValue);
-  }
-
+  });
   return _objectSpread({
-    points: points,
-    baseLine: baseLine,
-    layout: layout,
-    isRange: isRange
+    data: rects,
+    layout: layout
   }, offset);
-};
-
-Area.renderDotItem = function (option, props) {
-  var dotItem;
-
-  if ( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default().isValidElement(option)) {
-    dotItem = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default().cloneElement(option, props);
-  } else if (lodash_isFunction__WEBPACK_IMPORTED_MODULE_3___default()(option)) {
-    dotItem = option(props);
-  } else {
-    dotItem = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default().createElement(_shape_Dot__WEBPACK_IMPORTED_MODULE_17__.Dot, _extends({}, props, {
-      className: "recharts-area-dot"
-    }));
-  }
-
-  return dotItem;
 };
 
 /***/ }),
@@ -25283,6 +25117,177 @@ CartesianGrid.defaultProps = {
 
 /***/ }),
 
+/***/ "./node_modules/recharts/es6/cartesian/ErrorBar.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/recharts/es6/cartesian/ErrorBar.js ***!
+  \*********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "ErrorBar": function() { return /* binding */ ErrorBar; }
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _container_Layer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../container/Layer */ "./node_modules/recharts/es6/container/Layer.js");
+/* harmony import */ var _util_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../util/types */ "./node_modules/recharts/es6/util/types.js");
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+/**
+ * @fileOverview Render a group of error bar
+ */
+
+
+
+function ErrorBar(props) {
+  var offset = props.offset,
+      layout = props.layout,
+      width = props.width,
+      dataKey = props.dataKey,
+      data = props.data,
+      dataPointFormatter = props.dataPointFormatter,
+      xAxis = props.xAxis,
+      yAxis = props.yAxis,
+      others = _objectWithoutProperties(props, ["offset", "layout", "width", "dataKey", "data", "dataPointFormatter", "xAxis", "yAxis"]);
+
+  var svgProps = (0,_util_types__WEBPACK_IMPORTED_MODULE_1__.filterProps)(others);
+  var errorBars = data.map(function (entry, i) {
+    var _dataPointFormatter = dataPointFormatter(entry, dataKey),
+        x = _dataPointFormatter.x,
+        y = _dataPointFormatter.y,
+        value = _dataPointFormatter.value,
+        errorVal = _dataPointFormatter.errorVal;
+
+    if (!errorVal) {
+      return null;
+    }
+
+    var lineCoordinates = [];
+    var lowBound, highBound;
+
+    if (Array.isArray(errorVal)) {
+      var _errorVal = _slicedToArray(errorVal, 2);
+
+      lowBound = _errorVal[0];
+      highBound = _errorVal[1];
+    } else {
+      lowBound = highBound = errorVal;
+    }
+
+    if (layout === 'vertical') {
+      // error bar for horizontal charts, the y is fixed, x is a range value
+      var scale = xAxis.scale;
+      var yMid = y + offset;
+      var yMin = yMid + width;
+      var yMax = yMid - width;
+      var xMin = scale(value - lowBound);
+      var xMax = scale(value + highBound); // the right line of |--|
+
+      lineCoordinates.push({
+        x1: xMax,
+        y1: yMin,
+        x2: xMax,
+        y2: yMax
+      }); // the middle line of |--|
+
+      lineCoordinates.push({
+        x1: xMin,
+        y1: yMid,
+        x2: xMax,
+        y2: yMid
+      }); // the left line of |--|
+
+      lineCoordinates.push({
+        x1: xMin,
+        y1: yMin,
+        x2: xMin,
+        y2: yMax
+      });
+    } else if (layout === 'horizontal') {
+      // error bar for horizontal charts, the x is fixed, y is a range value
+      var _scale = yAxis.scale;
+      var xMid = x + offset;
+
+      var _xMin = xMid - width;
+
+      var _xMax = xMid + width;
+
+      var _yMin = _scale(value - lowBound);
+
+      var _yMax = _scale(value + highBound); // the top line
+
+
+      lineCoordinates.push({
+        x1: _xMin,
+        y1: _yMax,
+        x2: _xMax,
+        y2: _yMax
+      }); // the middle line
+
+      lineCoordinates.push({
+        x1: xMid,
+        y1: _yMin,
+        x2: xMid,
+        y2: _yMax
+      }); // the bottom line
+
+      lineCoordinates.push({
+        x1: _xMin,
+        y1: _yMin,
+        x2: _xMax,
+        y2: _yMin
+      });
+    }
+
+    return (
+      /*#__PURE__*/
+      // eslint-disable-next-line react/no-array-index-key
+      react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_container_Layer__WEBPACK_IMPORTED_MODULE_2__.Layer, _extends({
+        className: "recharts-errorBar",
+        key: "bar-".concat(i)
+      }, svgProps), lineCoordinates.map(function (coordinates, index) {
+        return (
+          /*#__PURE__*/
+          // eslint-disable-next-line react/no-array-index-key
+          react__WEBPACK_IMPORTED_MODULE_0___default().createElement("line", _extends({}, coordinates, {
+            key: "line-".concat(index)
+          }))
+        );
+      }))
+    );
+  });
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_container_Layer__WEBPACK_IMPORTED_MODULE_2__.Layer, {
+    className: "recharts-errorBars"
+  }, errorBars);
+}
+ErrorBar.defaultProps = {
+  stroke: 'black',
+  strokeWidth: 1.5,
+  width: 5,
+  offset: 0,
+  layout: 'horizontal'
+};
+ErrorBar.displayName = 'ErrorBar';
+
+/***/ }),
+
 /***/ "./node_modules/recharts/es6/cartesian/ReferenceArea.js":
 /*!**************************************************************!*\
   !*** ./node_modules/recharts/es6/cartesian/ReferenceArea.js ***!
@@ -25880,33 +25885,35 @@ YAxis.defaultProps = {
 
 /***/ }),
 
-/***/ "./node_modules/recharts/es6/chart/AreaChart.js":
-/*!******************************************************!*\
-  !*** ./node_modules/recharts/es6/chart/AreaChart.js ***!
-  \******************************************************/
+/***/ "./node_modules/recharts/es6/chart/BarChart.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/recharts/es6/chart/BarChart.js ***!
+  \*****************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "AreaChart": function() { return /* binding */ AreaChart; }
+/* harmony export */   "BarChart": function() { return /* binding */ BarChart; }
 /* harmony export */ });
 /* harmony import */ var _generateCategoricalChart__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./generateCategoricalChart */ "./node_modules/recharts/es6/chart/generateCategoricalChart.js");
-/* harmony import */ var _cartesian_Area__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../cartesian/Area */ "./node_modules/recharts/es6/cartesian/Area.js");
+/* harmony import */ var _cartesian_Bar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../cartesian/Bar */ "./node_modules/recharts/es6/cartesian/Bar.js");
 /* harmony import */ var _cartesian_XAxis__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../cartesian/XAxis */ "./node_modules/recharts/es6/cartesian/XAxis.js");
 /* harmony import */ var _cartesian_YAxis__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../cartesian/YAxis */ "./node_modules/recharts/es6/cartesian/YAxis.js");
 /* harmony import */ var _util_CartesianUtils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../util/CartesianUtils */ "./node_modules/recharts/es6/util/CartesianUtils.js");
 /**
- * @fileOverview Area Chart
+ * @fileOverview Bar Chart
  */
 
 
 
 
 
-var AreaChart = (0,_generateCategoricalChart__WEBPACK_IMPORTED_MODULE_0__.generateCategoricalChart)({
-  chartName: 'AreaChart',
-  GraphicalChild: _cartesian_Area__WEBPACK_IMPORTED_MODULE_1__.Area,
+var BarChart = (0,_generateCategoricalChart__WEBPACK_IMPORTED_MODULE_0__.generateCategoricalChart)({
+  chartName: 'BarChart',
+  GraphicalChild: _cartesian_Bar__WEBPACK_IMPORTED_MODULE_1__.Bar,
+  defaultTooltipEventType: 'axis',
+  validateTooltipEventTypes: ['axis', 'item'],
   axisComponents: [{
     axisType: 'xAxis',
     AxisComp: _cartesian_XAxis__WEBPACK_IMPORTED_MODULE_2__.XAxis
@@ -28216,6 +28223,27 @@ var generateCategoricalChart = function generateCategoricalChart(_ref6) {
     }, dot);
   }, _temp;
 };
+
+/***/ }),
+
+/***/ "./node_modules/recharts/es6/component/Cell.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/recharts/es6/component/Cell.js ***!
+  \*****************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Cell": function() { return /* binding */ Cell; }
+/* harmony export */ });
+/**
+ * @fileOverview Cross
+ */
+var Cell = function Cell(_props) {
+  return null;
+};
+Cell.displayName = 'Cell';
 
 /***/ }),
 
