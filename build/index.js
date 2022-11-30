@@ -111,12 +111,14 @@ function WidgetScreen() {
   const [postData, setPostData] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([]);
   const [totalDays, setTotlaDays] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(7);
   (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
-    fetch("https://eodhistoricaldata.com/api/eod/MCD.US?from=2017-01-05&to=2017-02-10&period=d&fmt=json&api_token=demo").then(res => res.json()).then(result => {
+    // api data fetch
+    const data = fetch("https://eodhistoricaldata.com/api/eod/MCD.US?from=2017-01-05&to=2017-02-10&period=d&fmt=json&api_token=demo").then(res => res.json()).then(result => {
       setPostData(result);
     }).catch(error => {
       console.log(error);
     });
   }, [totalDays]);
+  // here data is sliced into daywise
   const SlicedData = postData.slice(0, totalDays);
   console.log(SlicedData);
   const handleDuraton = e => {

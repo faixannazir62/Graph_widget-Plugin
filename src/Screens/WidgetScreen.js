@@ -4,8 +4,10 @@ import GraphComponent from "./Components/GraphComponent";
 function WidgetScreen() {
   const [postData, setPostData] = useState([]);
   const [totalDays, setTotlaDays] = useState(7);
+
   useEffect(() => {
-    fetch(
+    // api data fetch
+    const data = fetch(
       "https://eodhistoricaldata.com/api/eod/MCD.US?from=2017-01-05&to=2017-02-10&period=d&fmt=json&api_token=demo"
     )
       .then((res) => res.json())
@@ -16,6 +18,7 @@ function WidgetScreen() {
         console.log(error);
       });
   }, [totalDays]);
+  // here data is sliced into daywise
   const SlicedData = postData.slice(0, totalDays);
   console.log(SlicedData);
   const handleDuraton = (e) => {
