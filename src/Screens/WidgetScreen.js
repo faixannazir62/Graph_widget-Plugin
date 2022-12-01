@@ -4,6 +4,7 @@ import GraphComponent from "./Components/GraphComponent";
 function WidgetScreen() {
   const [postData, setPostData] = useState([]);
   const [dataLoaded, seteDataLoaded] = useState(false);
+  const [errorMsg, setErrorMsg] = useState(false);
   const [totalDays, setTotlaDays] = useState(7);
 
   useEffect(() => {
@@ -15,8 +16,10 @@ function WidgetScreen() {
       .then((result) => {
         setPostData(result);
         seteDataLoaded(true);
+        setErrorMsg(false);
       })
       .catch((error) => {
+        setErrorMsg(true);
         seteDataLoaded(false);
         console.log(error);
       });
@@ -47,6 +50,8 @@ function WidgetScreen() {
       <div className="inner-c graph-data">
         {dataLoaded ? (
           <GraphComponent SlicedData={SlicedData} />
+        ) : errorMsg ? (
+          <p className="LoadingText">Sorry,API is not Responding.</p>
         ) : (
           <p className="LoadingText">Loading data...</p>
         )}

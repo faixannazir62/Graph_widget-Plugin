@@ -110,13 +110,16 @@ __webpack_require__.r(__webpack_exports__);
 function WidgetScreen() {
   const [postData, setPostData] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([]);
   const [dataLoaded, seteDataLoaded] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false);
+  const [errorMsg, setErrorMsg] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false);
   const [totalDays, setTotlaDays] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(7);
   (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
     // api data fetch
     const data = fetch("https://eodhistoricaldata.com/api/eod/MCD.US?from=2017-01-05&to=2017-02-10&period=d&fmt=json&api_token=demo").then(res => res.json()).then(result => {
       setPostData(result);
       seteDataLoaded(true);
+      setErrorMsg(false);
     }).catch(error => {
+      setErrorMsg(true);
       seteDataLoaded(false);
       console.log(error);
     });
@@ -150,7 +153,9 @@ function WidgetScreen() {
     className: "inner-c graph-data"
   }, dataLoaded ? (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Components_GraphComponent__WEBPACK_IMPORTED_MODULE_2__["default"], {
     SlicedData: SlicedData
-  }) : (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+  }) : errorMsg ? (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+    className: "LoadingText"
+  }, "Sorry,API is not Responding.") : (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
     className: "LoadingText"
   }, "Loading data...")));
 }
