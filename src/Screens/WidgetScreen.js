@@ -3,6 +3,7 @@ import GraphComponent from "./Components/GraphComponent";
 
 function WidgetScreen() {
   const [postData, setPostData] = useState([]);
+  const [dataLoaded, seteDataLoaded] = useState(false);
   const [totalDays, setTotlaDays] = useState(7);
 
   useEffect(() => {
@@ -13,8 +14,10 @@ function WidgetScreen() {
       .then((res) => res.json())
       .then((result) => {
         setPostData(result);
+        seteDataLoaded(true);
       })
       .catch((error) => {
+        seteDataLoaded(false);
         console.log(error);
       });
   }, [totalDays]);
@@ -42,7 +45,11 @@ function WidgetScreen() {
         </div>
       </div>
       <div className="inner-c graph-data">
-        <GraphComponent SlicedData={SlicedData} />
+        {dataLoaded ? (
+          <GraphComponent SlicedData={SlicedData} />
+        ) : (
+          <p className="LoadingText">Loading data...</p>
+        )}
       </div>
     </div>
   );

@@ -24,6 +24,12 @@
   border: 1px solid #000;
   margin-top: 20px;
 }
+.LoadingText {
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 20%;
+}
 
 
 /*# sourceMappingURL=index.css.map*/
