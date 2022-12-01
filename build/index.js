@@ -151,7 +151,9 @@ function WidgetScreen() {
     value: "30"
   }, " Last 1 month")))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "inner-c graph-data"
-  }, dataLoaded ? (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Components_GraphComponent__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  },
+  // show these messages, on data loading or api is not respondig or show data
+  dataLoaded ? (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_Components_GraphComponent__WEBPACK_IMPORTED_MODULE_2__["default"], {
     SlicedData: SlicedData
   }) : errorMsg ? (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
     className: "LoadingText"

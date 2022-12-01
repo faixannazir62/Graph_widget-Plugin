@@ -48,13 +48,16 @@ function WidgetScreen() {
         </div>
       </div>
       <div className="inner-c graph-data">
-        {dataLoaded ? (
-          <GraphComponent SlicedData={SlicedData} />
-        ) : errorMsg ? (
-          <p className="LoadingText">Sorry,API is not Responding.</p>
-        ) : (
-          <p className="LoadingText">Loading data...</p>
-        )}
+        {
+          // show these messages, on data loading or api is not respondig or show data
+          dataLoaded ? (
+            <GraphComponent SlicedData={SlicedData} />
+          ) : errorMsg ? (
+            <p className="LoadingText">Sorry,API is not Responding.</p>
+          ) : (
+            <p className="LoadingText">Loading data...</p>
+          )
+        }
       </div>
     </div>
   );
