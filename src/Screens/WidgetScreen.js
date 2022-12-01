@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import GraphComponent from "./Components/GraphComponent";
 
 function WidgetScreen() {
-  const [postData, setPostData] = useState([]);
+  const [apiData, setApiData] = useState([]);
   const [dataLoaded, seteDataLoaded] = useState(false);
   const [errorMsg, setErrorMsg] = useState(false);
   const [totalDays, setTotlaDays] = useState(7);
@@ -14,7 +14,7 @@ function WidgetScreen() {
     )
       .then((res) => res.json())
       .then((result) => {
-        setPostData(result);
+        setApiData(result);
         seteDataLoaded(true);
         setErrorMsg(false);
       })
@@ -25,7 +25,7 @@ function WidgetScreen() {
       });
   }, [totalDays]);
   // here data is sliced into daywise
-  const SlicedData = postData.slice(0, totalDays);
+  const SlicedData = apiData.slice(0, totalDays);
   // handle user selected options
   const handleDuraton = (e) => {
     setTotlaDays(e.target.value);

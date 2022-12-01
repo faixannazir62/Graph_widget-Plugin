@@ -108,14 +108,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function WidgetScreen() {
-  const [postData, setPostData] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([]);
+  const [apiData, setApiData] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([]);
   const [dataLoaded, seteDataLoaded] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false);
   const [errorMsg, setErrorMsg] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false);
   const [totalDays, setTotlaDays] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(7);
   (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
     // api data fetch
     const data = fetch("https://eodhistoricaldata.com/api/eod/MCD.US?from=2017-01-05&to=2017-02-10&period=d&fmt=json&api_token=demo").then(res => res.json()).then(result => {
-      setPostData(result);
+      setApiData(result);
       seteDataLoaded(true);
       setErrorMsg(false);
     }).catch(error => {
@@ -125,7 +125,7 @@ function WidgetScreen() {
     });
   }, [totalDays]);
   // here data is sliced into daywise
-  const SlicedData = postData.slice(0, totalDays);
+  const SlicedData = apiData.slice(0, totalDays);
   // handle user selected options
   const handleDuraton = e => {
     setTotlaDays(e.target.value);
