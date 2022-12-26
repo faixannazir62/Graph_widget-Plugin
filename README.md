@@ -13,7 +13,7 @@ It can display data into 3 options: <b>last 7 days</b>,<b>last 15 days</b>and <b
 <h2>if data is fetched, then you can display data into 3 options Like : 7 days or 15 days or 1 month<h2>
 <img src="https://i.ibb.co/hdGzdyB/image-bb1.png" alt="7" border="0">
 
-<h2>On hover it will show information regarding stock market<h2>
+<h2>On hover it will show likes and dislikes daywise<h2>
 <img src="https://i.ibb.co/8zXqtvy/img22.png" alt="whith-info" border="0">
 
 <h2>Author<h2>
