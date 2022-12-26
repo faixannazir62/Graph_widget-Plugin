@@ -9,9 +9,7 @@ function WidgetScreen() {
 
   useEffect(() => {
     // api data fetch
-    const data = fetch(
-      "https://eodhistoricaldata.com/api/eod/MCD.US?from=2017-01-05&to=2017-02-10&period=d&fmt=json&api_token=demo"
-    )
+    const data = fetch("http://localhost/wordpress/wp-json/wp/v2/graphdata")
       .then((res) => res.json())
       .then((result) => {
         setApiData(result);

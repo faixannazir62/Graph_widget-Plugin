@@ -2,6 +2,7 @@ import React, { PureComponent } from "react";
 import {
   BarChart,
   Bar,
+  Cell,
   XAxis,
   YAxis,
   CartesianGrid,
@@ -18,7 +19,7 @@ export default class Example extends PureComponent {
     return (
       <ResponsiveContainer width="100%" height="100%">
         <BarChart
-          width={100}
+          width={500}
           height={300}
           data={data}
           margin={{
@@ -29,14 +30,12 @@ export default class Example extends PureComponent {
           }}
         >
           <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="date" />
+          <XAxis dataKey="days" />
           <YAxis />
           <Tooltip />
           <Legend />
-          <Bar dataKey="open" fill="#8884d8" />
-          <Bar dataKey="high" fill="#00FF00" />
-          <Bar dataKey="low" fill="#F70000" />
-          <Bar dataKey="close" fill="#BE3835" />
+          <Bar dataKey="likes" fill="#8884d8" />
+          <Bar dataKey="dislikes" fill="#82ca9d" />
         </BarChart>
       </ResponsiveContainer>
     );

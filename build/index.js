@@ -60,7 +60,7 @@ class Example extends react__WEBPACK_IMPORTED_MODULE_1__.PureComponent {
       width: "100%",
       height: "100%"
     }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(recharts__WEBPACK_IMPORTED_MODULE_3__.BarChart, {
-      width: 100,
+      width: 500,
       height: 300,
       data: data,
       margin: {
@@ -72,19 +72,13 @@ class Example extends react__WEBPACK_IMPORTED_MODULE_1__.PureComponent {
     }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(recharts__WEBPACK_IMPORTED_MODULE_4__.CartesianGrid, {
       strokeDasharray: "3 3"
     }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(recharts__WEBPACK_IMPORTED_MODULE_5__.XAxis, {
-      dataKey: "date"
+      dataKey: "days"
     }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(recharts__WEBPACK_IMPORTED_MODULE_6__.YAxis, null), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(recharts__WEBPACK_IMPORTED_MODULE_7__.Tooltip, null), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(recharts__WEBPACK_IMPORTED_MODULE_8__.Legend, null), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(recharts__WEBPACK_IMPORTED_MODULE_9__.Bar, {
-      dataKey: "open",
+      dataKey: "likes",
       fill: "#8884d8"
     }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(recharts__WEBPACK_IMPORTED_MODULE_9__.Bar, {
-      dataKey: "high",
-      fill: "#00FF00"
-    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(recharts__WEBPACK_IMPORTED_MODULE_9__.Bar, {
-      dataKey: "low",
-      fill: "#F70000"
-    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(recharts__WEBPACK_IMPORTED_MODULE_9__.Bar, {
-      dataKey: "close",
-      fill: "#BE3835"
+      dataKey: "dislikes",
+      fill: "#82ca9d"
     })));
   }
 }
@@ -114,7 +108,7 @@ function WidgetScreen() {
   const [totalDays, setTotlaDays] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(7);
   (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
     // api data fetch
-    const data = fetch("https://eodhistoricaldata.com/api/eod/MCD.US?from=2017-01-05&to=2017-02-10&period=d&fmt=json&api_token=demo").then(res => res.json()).then(result => {
+    const data = fetch("http://localhost/wordpress/wp-json/wp/v2/graphdata").then(res => res.json()).then(result => {
       setApiData(result);
       seteDataLoaded(true);
       setErrorMsg(false);
