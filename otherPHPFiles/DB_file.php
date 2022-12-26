@@ -24,7 +24,7 @@ function DBP_tb_create(){
 }
 
 // Delete the table function 
-// this fucntion will on Deactivation
+// this fucntion will be executed on plugin Deactivation
 function delete_plugin_database_table(){
     global $wpdb;
     $table_name = $wpdb->prefix . 'graph_data';

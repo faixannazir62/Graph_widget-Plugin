@@ -37,7 +37,7 @@ function wp_graph_widget_fun(){
      require_once plugin_dir_path( __FILE__ ) . 'templates/app.php';
 }
 
-// Enqueue scripts and styles on single page.
+// Enqueue scripts and styles on single page which is index.php
 
 function GW_load_scripts($hook) {
 
