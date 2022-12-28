@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@wordpress/i18n": "^4.23.0",
     "@wordpress/scripts": "^24.6.0",
     "recharts": "^2.1.16"
   }

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import GraphComponent from "./Components/GraphComponent";
-
+import { __ } from "@wordpress/i18n";
 function WidgetScreen() {
   const [apiData, setApiData] = useState([]);
   const [dataLoaded, seteDataLoaded] = useState(false);
@@ -33,15 +33,15 @@ function WidgetScreen() {
     <div className="main-c">
       <div className="inner-c title-nd-options">
         <div className="title">
-          <h2>Graph Widget</h2>
+          <h2>{__("Graph Widget", "graph-widget")}</h2>
         </div>
         <div className="options">
           <select name="duration" id="duraton" onChange={handleDuraton}>
             <option value="7" selected>
-              Last 7 days
+              {__("Last 7 days", "graph-widget")}
             </option>
-            <option value="15"> Last 15 days</option>
-            <option value="30"> Last 1 month</option>
+            <option value="15">{__("Last 15 days", "graph-widget")}</option>
+            <option value="30">{__("Last 1 month", "graph-widget")}</option>
           </select>
         </div>
       </div>
@@ -51,9 +51,13 @@ function WidgetScreen() {
           dataLoaded ? (
             <GraphComponent SlicedData={SlicedData} />
           ) : errorMsg ? (
-            <p className="LoadingText">Sorry,API is not Responding.</p>
+            <p className="LoadingText">
+              {__("Sorry,API is not Responding.", "graph-widget")}
+            </p>
           ) : (
-            <p className="LoadingText">Loading data...</p>
+            <p className="LoadingText">
+              {__(" Loading data...", "graph-widget")}
+            </p>
           )
         }
       </div>
