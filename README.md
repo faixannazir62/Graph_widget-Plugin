@@ -11,10 +11,10 @@ It can display data into 3 options: <b>last 7 days</b>,<b>last 15 days</b>and <b
 <img src="https://i.ibb.co/ssMwQQ2/api-not-responding.png" alt="api-not-responding" border="0">
 
 <h2>if data is fetched, then you can display data into 3 options Like : 7 days or 15 days or 1 month<h2>
-<img src="https://i.ibb.co/sJXQsNV/7.png" alt="7" border="0">
+<img src="https://i.ibb.co/hdGzdyB/image-bb1.png" alt="7" border="0">
 
-<h2>On hover it will show information regarding stock market<h2>
-<img src="https://i.ibb.co/ZLh1Hp1/whith-info.png" alt="whith-info" border="0">
+<h2>On hover it will show likes and dislikes daywise<h2>
+<img src="https://i.ibb.co/8zXqtvy/img22.png" alt="whith-info" border="0">
 
 <h2>Author<h2>
 <h6>Faizan Nazir<h6>
