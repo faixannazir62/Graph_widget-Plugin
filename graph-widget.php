@@ -28,10 +28,10 @@ function graph_widget_load_text_domain() {
 include_once("otherPHPFiles/DB_file.php");
 
 
-// register hook for crate 
+// register hook  for create table function
 register_activation_hook(__FILE__,"DBP_tb_create");
 
-//fetch data rest api custom route file
+//fetch data wp rest api custom route file
 include_once("otherPHPFiles/Fetch_custom_route.php");
 
 
@@ -56,6 +56,7 @@ function GW_load_scripts($hook) {
   }
     wp_enqueue_style( 'graph-widget-style', plugin_dir_url( __FILE__ ) . 'build/index.css' );
     wp_enqueue_script( 'graph-widget-script', plugin_dir_url( __FILE__ ) . 'build/index.js', array( 'wp-element', 'wp-i18n'), '1.0.0', true );
+    
   //load translation script file
     wp_set_script_translations( 'graph-widget-script', 'graph-widget',  plugin_dir_path( __FILE__ )  . 'languages' ); 
 

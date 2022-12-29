@@ -1,5 +1,5 @@
 <?php
-// Creating database table for the plugin
+// Creating tabel inside the database
  
 function DBP_tb_create(){
           global $wpdb;
