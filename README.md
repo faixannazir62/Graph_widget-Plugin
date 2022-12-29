@@ -5,7 +5,7 @@
 <h2>Description <h2>
 This plugin shows static likes and dislikes of the single post on the Wordpress Deshboard.
 
-It can display data into 3 options: <b>last 7 days</b>,<b>last 15 days</b>and <b>last 1 month</b>.
+It can display data into 3 options: <b>last 7 days</b>,<b> last 15 days</b> and <b>last 1 month</b>.
 
 <h2>The loading message will display while the data is being pulled from the API.<h2>
 <img src="https://i.ibb.co/qyJvJfz/loading-data.png" alt="loading-data" border="0"/>
