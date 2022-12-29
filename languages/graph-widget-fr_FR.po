@@ -1,0 +1,31 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Graph Widget 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/Graph_widget\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2022-12-29T10:38:39+01:00\n"
+"PO-Revision-Date: 2022-12-29 15:11+0530\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.2.2\n"
+"X-Domain: graph-widget\n"
+
+#. Plugin Name of the plugin
+#: graph-widget.php:43
+#: build/index.js:136
+#: src/Screens/WidgetScreen.js:36
+#: build/index.js:93
+msgid "Graph Widget"
+msgstr "Widget graphique"
+
+#. Description of the plugin
+msgid "A Graph Widget assignment"
+msgstr "Une mission de widget graphique"
+
+#. Author of the plugin
+msgid "Faizan Nazir"
+msgstr "Faizan Nazir"

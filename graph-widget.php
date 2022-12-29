@@ -9,12 +9,21 @@
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       graph-widget
-*  Domain Path:       /languages
+*  Domain Path:       /languages/
  */
 
  // No Direct Access
 if( !defined( 'ABSPATH' ) ) exit();
 
+//translations functions
+//Load Text Domain
+add_action( 'plugins_loaded', 'graph_widget_load_text_domain' );
+function graph_widget_load_text_domain() {
+  load_plugin_textdomain("graph-widget", false, dirname( plugin_basename( __FILE__ ) ) . '/languages/');
+}
+
+
+ 
 // database file
 include_once("otherPHPFiles/DB_file.php");
 
@@ -25,14 +34,6 @@ register_activation_hook(__FILE__,"DBP_tb_create");
 //fetch data rest api custom route file
 include_once("otherPHPFiles/Fetch_custom_route.php");
 
-//translations functions
-//Load Text Domain
-add_action( 'init', 'graph_widget_load_text_domain' );
-function graph_widget_load_text_domain() {
-    load_plugin_textdomain( ' trans-graph-widget', false, basename(__DIR__) . '/languages' );
-   
-}
-wp_set_script_translations( 'graph-widget-script', 'graph-widget', plugin_dir_path( __FILE__ ). 'languages');
 
  //  dashboard setup
  add_action('wp_dashboard_setup','add_dashboard_widget' );
@@ -55,7 +56,9 @@ function GW_load_scripts($hook) {
   }
     wp_enqueue_style( 'graph-widget-style', plugin_dir_url( __FILE__ ) . 'build/index.css' );
     wp_enqueue_script( 'graph-widget-script', plugin_dir_url( __FILE__ ) . 'build/index.js', array( 'wp-element', 'wp-i18n'), '1.0.0', true );
-  
+  //load translation script file
+    wp_set_script_translations( 'graph-widget-script', 'graph-widget',  plugin_dir_path( __FILE__ )  . 'languages' ); 
+
 }
 add_action('admin_enqueue_scripts', 'GW_load_scripts');
 
