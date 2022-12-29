@@ -3,7 +3,7 @@
 <p><b>Tech stack: Reactsjs, CSS, PHP, Wp Rest API </b></p>
 
 <h2>Description <h2>
-This plugin shows static likes and dislike of the single post on the Wordpress Deshboard.
+This plugin shows static likes and dislikes of the single post on the Wordpress Deshboard.
 
 It can display data into 3 options: <b>last 7 days</b>,<b>last 15 days</b>and <b>last 1 month</b>.
 
