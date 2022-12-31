@@ -1,6 +1,6 @@
 <h2>Wordpress Dashboard Graph Widget Plugin </h2>
 
-<p><b>Tech stack: Reactsjs, CSS, PHP, Wp Rest API </b></p>
+<p><b>Tech stack: Reactjs, CSS, PHP, Wp Rest API </b></p>
 
 <h2>Description <h2>
 This plugin shows static likes and dislikes of the single post on the Wordpress Deshboard.
