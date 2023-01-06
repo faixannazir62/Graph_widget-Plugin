@@ -111,8 +111,9 @@ function WidgetScreen() {
   const [totalDays, setTotlaDays] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(7);
   (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
     // api data fetch
-    // change this url "http://localhost/wordpress" according to you website url keep rest url as it is.
-    // E.g https://example.com/?rest_route=/wp/v2/graphdata
+    // change this url "http://localhost/wordpress" According to you website url "keep rest url as it is".
+    // E.g "https://example.com/?rest_route=/wp/v2/graphdata"
+    // ! Also change fetch path inside the " build folder > index.js  (you can find out the code between line no. 110 to 130)"
     const data = fetch("http://localhost/wordpress/?rest_route=/wp/v2/graphdata").then(res => res.json()).then(result => {
       setApiData(result);
       seteDataLoaded(true);
