@@ -9,7 +9,11 @@ function WidgetScreen() {
 
   useEffect(() => {
     // api data fetch
-    const data = fetch("http://localhost/wordpress/wp-json/wp/v2/graphdata")
+    // change this url "http://localhost/wordpress" according to you website url keep rest url as it is.
+    // E.g https://example.com/?rest_route=/wp/v2/graphdata
+    const data = fetch(
+      "http://localhost/wordpress/?rest_route=/wp/v2/graphdata"
+    )
       .then((res) => res.json())
       .then((result) => {
         setApiData(result);
