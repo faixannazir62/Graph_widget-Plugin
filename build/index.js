@@ -113,7 +113,7 @@ function WidgetScreen() {
     // api data fetch
     // change this url "http://localhost/wordpress" According to you website url "keep rest url as it is".
     // E.g "https://example.com/?rest_route=/wp/v2/graphdata"
-    // ! Also change fetch path inside the " build folder > index.js  (you can find out the code between line no. 110 to 130)"
+    // ! Also change fetch url path inside the " build folder > index.js (only if you are not using npm then you have to change "build > index.js" fetch url path manually as well) "
     const data = fetch("http://localhost/wordpress/?rest_route=/wp/v2/graphdata").then(res => res.json()).then(result => {
       setApiData(result);
       seteDataLoaded(true);
