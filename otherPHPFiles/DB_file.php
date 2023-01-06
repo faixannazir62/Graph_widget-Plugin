@@ -4,9 +4,9 @@
 function DBP_tb_create(){
           global $wpdb;
 
-          $DBP_tb_name=$wpdb->prefix."graph_data";
+           $tableName = $wpdb->prefix."graph_data";
 
-          $DBP_query= "CREATE TABLE $DBP_tb_name(
+          $DBP_query= "CREATE TABLE  $tableName(
                     days varchar(40),
                     likes int(100),
                     dislikes int(100)
@@ -27,8 +27,8 @@ function DBP_tb_create(){
 // this fucntion will be executed on plugin Deactivation
 function delete_plugin_database_table(){
     global $wpdb;
-    $table_name = $wpdb->prefix . 'graph_data';
-    $sql = "DROP TABLE IF EXISTS $table_name";
+   $tableName = $wpdb->prefix . 'graph_data';
+    $sql = "DROP TABLE IF EXISTS $tableName";
     $wpdb->query($sql);
 }
 

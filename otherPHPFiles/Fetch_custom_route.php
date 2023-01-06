@@ -10,7 +10,8 @@ function wp_register_rest_route_GD(){
 }
 function handle_rest_GD_request(){
           global $wpdb;
-          $result = $wpdb->get_results("SELECT * FROM wp_graph_data");
+                    $tableName=$wpdb->prefix."graph_data";
+          $result = $wpdb->get_results("SELECT * FROM  $tableName");
           return $result;
 
 }
