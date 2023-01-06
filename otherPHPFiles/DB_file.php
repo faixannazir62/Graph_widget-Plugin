@@ -13,8 +13,8 @@ function DBP_tb_create(){
 
                     
           )";
-
-          require_once( ABSPATH . "wp-admin\includes\upgrade.php" );
+        
+          require_once( ABSPATH ."wp-admin/includes/upgrade.php" );
             dbDelta( $DBP_query );
 
             
