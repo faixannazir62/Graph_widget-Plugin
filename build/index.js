@@ -109,12 +109,13 @@ function WidgetScreen() {
   const [dataLoaded, seteDataLoaded] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false);
   const [errorMsg, setErrorMsg] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false);
   const [totalDays, setTotlaDays] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(7);
+  var base_url = window.location.origin;
+  console.log(base_url);
   (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
     // api data fetch
-    // change this url "http://localhost/wordpress" According to you website url "keep rest url as it is".
-    // E.g "https://example.com/?rest_route=/wp/v2/graphdata"
-    // ! Also change fetch url path inside the " build folder > index.js (only if you are not using npm then you have to change "build > index.js" fetch url path manually as well) "
-    const data = fetch("http://localhost/wordpress/?rest_route=/wp/v2/graphdata").then(res => res.json()).then(result => {
+    //  If you want use this plugin on your localhost then change this fetch url accordingly e.g(fetch("https://example.com/?rest_route=/wp/v2/graphdata"))
+    // if you are using this plugin on live website it will automatically get base url.
+    const data = fetch(base_url + "/?rest_route=/wp/v2/graphdata").then(res => res.json()).then(result => {
       setApiData(result);
       seteDataLoaded(true);
       setErrorMsg(false);
