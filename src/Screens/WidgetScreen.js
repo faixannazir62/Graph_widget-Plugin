@@ -7,7 +7,6 @@ function WidgetScreen() {
   const [errorMsg, setErrorMsg] = useState(false);
   const [totalDays, setTotlaDays] = useState(7);
   var base_url = window.location.origin;
-  console.log(base_url);
   useEffect(() => {
     // api data fetch
     //  If you want use this plugin on your localhost then change this fetch url accordingly e.g(fetch("https://example.com/?rest_route=/wp/v2/graphdata"))
@@ -22,7 +21,6 @@ function WidgetScreen() {
       .catch((error) => {
         setErrorMsg(true);
         seteDataLoaded(false);
-        console.log(error);
       });
   }, [totalDays]);
   // here data is sliced into daywise

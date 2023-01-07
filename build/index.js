@@ -110,7 +110,6 @@ function WidgetScreen() {
   const [errorMsg, setErrorMsg] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false);
   const [totalDays, setTotlaDays] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(7);
   var base_url = window.location.origin;
-  console.log(base_url);
   (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
     // api data fetch
     //  If you want use this plugin on your localhost then change this fetch url accordingly e.g(fetch("https://example.com/?rest_route=/wp/v2/graphdata"))
@@ -122,7 +121,6 @@ function WidgetScreen() {
     }).catch(error => {
       setErrorMsg(true);
       seteDataLoaded(false);
-      console.log(error);
     });
   }, [totalDays]);
   // here data is sliced into daywise
