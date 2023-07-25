@@ -31,10 +31,10 @@ function WidgetScreen() {
   };
 
   return (
-    <div className="main-c">
-      <div className="inner-c title-nd-options">
-        <div className="title">
-          <h2>{__("Graph Widget", "graph-widget")}</h2>
+    <div className="widget-box">
+      <div className="inner-widget-box title-and-options-box">
+        <div className="title-box">
+          <h2 className="widget-title">{__("Graph Widget", "graph-widget")}</h2>
         </div>
         <div className="options">
           <select name="duration" id="duraton" onChange={handleDuraton}>
@@ -46,7 +46,7 @@ function WidgetScreen() {
           </select>
         </div>
       </div>
-      <div className="inner-c graph-data">
+      <div className="inner-widget-box graph-data-box">
         {
           // show these messages, on data loading or api is not respondig or show data
           dataLoaded ? (
