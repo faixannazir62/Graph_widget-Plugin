@@ -11,14 +11,14 @@ function WidgetScreen() {
     // api data fetch
     //  If you want use this plugin on your localhost then change this fetch url accordingly e.g(fetch("https://example.com/?rest_route=/wp/v2/graphdata"))
     // if you are using this plugin on live website it will automatically get base url.
-    const data = fetch(base_url + "/?rest_route=/wp/v2/graphdata")
+    fetch(base_url + "/?rest_route=/wp/v2/graphdata")
       .then((res) => res.json())
       .then((result) => {
         setApiData(result);
         seteDataLoaded(true);
         setErrorMsg(false);
       })
-      .catch((error) => {
+      .catch(() => {
         setErrorMsg(true);
         seteDataLoaded(false);
       });
