@@ -10,7 +10,7 @@
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       graph-widget
 *  Domain Path:       /languages/
- */
+*/
 
  // No Direct Access
 if( !defined( 'ABSPATH' ) ) exit();
