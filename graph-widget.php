@@ -66,6 +66,3 @@ function gw_load_scripts($hook) {
 
 }
 add_action( 'admin_enqueue_scripts', 'gw_load_scripts' );
-
-//Detele table when plugin is uninstalled.
-register_uninstall_hook( __FILE__, 'delete_plugin_database_table' );
