@@ -20,11 +20,3 @@ function gw_db_table_create() {
 
 }
 
-// Delete the table function 
-function delete_plugin_database_table() {
-    global $wpdb;
-    $table_name = $wpdb->prefix . 'graph_data';
-    $sql = "DROP TABLE IF EXISTS $table_name";
-    $wpdb -> query( $sql );
-}
-
