@@ -1,6 +1,5 @@
 <?php
-// Creating tabel inside the database
- 
+// Create table function
 function gw_db_table_create() {
     global $wpdb;
     $table_name = $wpdb->prefix . "graph_data";
@@ -22,7 +21,6 @@ function gw_db_table_create() {
 }
 
 // Delete the table function 
-// this fucntion will be executed on plugin Deactivation
 function delete_plugin_database_table() {
     global $wpdb;
     $table_name = $wpdb->prefix . 'graph_data';
