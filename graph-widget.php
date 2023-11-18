@@ -67,6 +67,5 @@ function gw_load_scripts($hook) {
 }
 add_action( 'admin_enqueue_scripts', 'gw_load_scripts' );
 
-// Delete the table when plugin is deactived.
-// we don't want duplicats of our data when we reactivate it again.
-register_deactivation_hook( __FILE__, 'delete_plugin_database_table' );
+//Detele table when plugin is uninstalled.
+register_uninstall_hook( __FILE__, 'delete_plugin_database_table' );
