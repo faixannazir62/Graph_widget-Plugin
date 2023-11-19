@@ -26,14 +26,14 @@ function graph_widget_load_text_domain() {
 
  
 // database file
-include_once "otherPHPFiles/db-file.php" ;
+include_once "includes/db-file.php" ;
 
 
 // register hook  for create table function
 register_activation_hook( __FILE__, "gw_db_table_create" );
 
 //fetch data from data base using  wp rest api, custom route file
-include_once "otherPHPFiles/fetch-custom-route.php";
+include_once "includes/fetch-custom-route.php";
 
 
  //  dashboard setup
